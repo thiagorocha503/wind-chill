@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wind chill app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Online calculator the wind chill in degrees Celsius and Fahrenheit">
+    <meta name="keywords" content="wind chill calculator,wind chill,índice de resfriamento, sensação térmica">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Thiago Rocha Ferreira">
+</head>
+
+<body>
+    <!-- Start code -->
+    <div id="app">
+        <div class="row">
+            <h2 class="title">Wind chill App</h2>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="temperatureInput" id="temperatureLabel">Temperature (°F)</label>
+            </div>
+            <div class="col-75">
+                <input type="number" id="temperatureInput" placeholder="Enter temperature" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="speedInput" id="speedLabel">Wind speed (mph)</label>
+            </div>
+            <div class="col-75">
+                <input type="number" id="speedInput" placeholder="Enter wind speed" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="measurementSystemSelect">Measurement system</label>
+            </div>
+            <div class="col-75">
+                <select id="measurementSystemSelect">
+                    <option value="english-system" selected>English</option>
+                    <option value="metric-system" >Metric</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <input onclick="onCalculate();" type="button" value="Calculate" />
+        </div>
+        <div class="row" id="resul-container">
+            <div class="col-windchill">
+                <h4 for="result" class="label-result">Result: &nbsp;</h4>
+            </div>
+            <div class="col-windchil">
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+    <!--  End code  -->
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
