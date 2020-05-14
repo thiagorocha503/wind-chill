@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Wind chill app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/clouds.png" size="32x32" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <meta name="description" content="Online calculator the wind chill in degrees Celsius and Fahrenheit">
     <meta name="keywords" content="wind chill calculator,wind chill,índice de resfriamento, sensação térmica">
@@ -15,7 +16,6 @@
 </head>
 
 <body>
-    <!-- Start code -->
     <div id="page-container">
         <div id="content-wrap">
             <div id="app">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input onclick="onCalculate();" type="button" value="Calculate" />
+                    <input onclick="onCalculate();" title="Calculate wind chill" type="button" value="Calculate" />
                 </div>
                 <div class="row" id="resul-container">
                     <div class="col-windchill">
@@ -63,11 +63,12 @@
             </div>
         </div>
         <footer id="footer">
-            <p id="footer-content">Made with <span id="heart-emoji">❤</span> by <a href="http://github.com/thiagorocha503/" target="_blank" id="github-link" rel="noopener noreferrer">Thiago Rocha</a></p>
+            <span id="footer-content">
+                <p>Made with <span id="heart-emoji">❤</span> by <a href="http://github.com/thiagorocha503/" target="_blank" id="github-link" rel="noopener noreferrer" title="Thiago Rocha">Thiago Rocha</a> | Icons made by <a href="https://www.flaticon.com/authors/freepik"
+                title="Freepik" class="flaticon-link" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" class="flaticon-link" title="Flaticon" target="_blank">www.flaticon.com</a></p>
+            </span>
         </footer>
     </div>
-    <!--  End code  -->
-
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

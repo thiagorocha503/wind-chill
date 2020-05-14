@@ -32,18 +32,38 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#footer-content p {
+    text-align: center;
+    background-color: black;
+    word-wrap: break-word;
+}
+
 #heart-emoji {
     color: red;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 #github-link {
     color: gray;
-    text-decoration: none;
 }
 
 #github-link:hover {
     color: white;
-    text-decoration: underline;
+}
+
+.flaticon-link {
+    color: #69E781;
+}
+
+.flaticon-link:hover {
+    color: #49D295;
 }
 
 #app {
