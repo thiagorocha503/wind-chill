@@ -16,48 +16,55 @@
 
 <body>
     <!-- Start code -->
-    <div id="app">
-        <div class="row">
-            <h2 class="title">Wind chill App</h2>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="temperatureInput" id="temperatureLabel">Temperature (°F)</label>
-            </div>
-            <div class="col-75">
-                <input type="number" id="temperatureInput" placeholder="Enter temperature" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="speedInput" id="speedLabel">Wind speed (mph)</label>
-            </div>
-            <div class="col-75">
-                <input type="number" id="speedInput" placeholder="Enter wind speed" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="measurementSystemSelect">Measurement system</label>
-            </div>
-            <div class="col-75">
-                <select id="measurementSystemSelect">
+    <div id="page-container">
+        <div id="content-wrap">
+            <div id="app">
+                <div class="row">
+                    <h2 class="title">Wind chill App</h2>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="temperatureInput" id="temperatureLabel">Temperature (°F)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="temperatureInput" placeholder="Enter temperature" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="speedInput" id="speedLabel">Wind speed (mph)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="speedInput" placeholder="Enter wind speed" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="measurementSystemSelect">Measurement system</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="measurementSystemSelect">
                     <option value="english-system" selected>English</option>
                     <option value="metric-system" >Metric</option>
                 </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <input onclick="onCalculate();" type="button" value="Calculate" />
+                </div>
+                <div class="row" id="resul-container">
+                    <div class="col-windchill">
+                        <h4 for="result" class="label-result">Result: &nbsp;</h4>
+                    </div>
+                    <div class="col-windchil">
+                        <span id="result"></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <input onclick="onCalculate();" type="button" value="Calculate" />
-        </div>
-        <div class="row" id="resul-container">
-            <div class="col-windchill">
-                <h4 for="result" class="label-result">Result: &nbsp;</h4>
-            </div>
-            <div class="col-windchil">
-                <span id="result"></span>
-            </div>
-        </div>
+        <footer id="footer">
+            <p id="footer-content">Made with <span id="heart-emoji">❤</span> by <a href="http://github.com/thiagorocha503/" target="_blank" id="github-link" rel="noopener noreferrer">Thiago Rocha</a></p>
+        </footer>
     </div>
     <!--  End code  -->
 
