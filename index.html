@@ -3,73 +3,69 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Wind chill app</title>
+    <title>Wind chill</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="images/clouds.png" size="32x32" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <meta name="description" content="Online calculator the wind chill in degrees Celsius and Fahrenheit">
     <meta name="keywords" content="wind chill calculator,wind chill,índice de resfriamento, sensação térmica">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Thiago Rocha Ferreira">
+    <link href="css/bootstrap@5.0.2.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
-            <div id="app">
-                <div class="row">
-                    <h2 class="title">Wind chill App</h2>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="temperatureInput" id="temperatureLabel">Temperature (°F)</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="number" id="temperatureInput" placeholder="Enter temperature" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="speedInput" id="speedLabel">Wind speed (mph)</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="number" id="speedInput" placeholder="Enter wind speed" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="measurementSystemSelect">Measurement system</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="measurementSystemSelect">
-                    <option value="english-system" selected>English</option>
-                    <option value="metric-system" >Metric</option>
-                </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <input onclick="onCalculate();" title="Calculate wind chill" type="button" value="Calculate" />
-                </div>
-                <div class="row" id="resul-container">
-                    <div class="col-windchill">
-                        <h4 for="result" class="label-result">Result: &nbsp;</h4>
-                    </div>
-                    <div class="col-windchil">
-                        <span id="result"></span>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar bg-primary navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">Wind chill</a>
         </div>
-        <footer id="footer">
-            <span id="footer-content">
-                <p>Made with <span id="heart-emoji">❤</span> by <a href="http://github.com/thiagorocha503/" target="_blank" id="github-link" rel="noopener noreferrer" title="Thiago Rocha">Thiago Rocha</a> | Icons made by <a href="https://www.flaticon.com/authors/freepik"
-                title="Freepik" class="flaticon-link" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" class="flaticon-link" title="Flaticon" target="_blank">www.flaticon.com</a></p>
-            </span>
-        </footer>
+    </nav>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8  col-lg-6  my-2">
+                <label class="mb-2 form-label" for="input-temperature">Temperature</label>
+                <input class="form-control" id="input-temperature" placeholder="Enter temperature"  type="number">    
+                <div class="invalid-feedback">Fill out this field</div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3  my-2">
+                <label class="mb-2 form-label " for="temperature-system">Temperature system</label>
+                <select class="form-control" id="temperature-system">
+                    <option value="celcius">°C</option>
+                    <option value="fahrenheit" selected>°F</option>
+                </select>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6 my-2">
+                <label class="mb-2 form-label" for="speed-input">Speed</label>
+                <input class="form-control " placeholder="Enter speed "   type="number" id="speed-input">
+                <div class="invalid-feedback" id="speed-feedback"></div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3  my-2">
+                <label class="mb-2 form-label" for="speed-system">Speed system</label>
+                <select class="form-control" id="speed-system">
+                    <option value="knot">knot</option>
+                    <option value="kml">km/h</option>
+                    <option value="mph" selected>mph</option>
+                    <option value="ms">m/s</option>
+                    <option value="fts">ft/s</option>
+                </select>
+            </div>
+        </div>    
+        <div class="row justify-content-center my-3">
+            <div class="col-sm-12 col-md-3 ">
+                <button style="width: 100%;" id="btn-calculate" class="btn btn-primary" type="button">Calculate</button>
+            </div>
+        </div> 
+        <div class="row ">
+            <div class="col d-flex justify-content " style="justify-content: space-around;">
+                <p id=  "result"></p>        
+            </div>  
+        </div>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
